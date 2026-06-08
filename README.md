@@ -1,10 +1,4 @@
-# ici_template [This section can be removed in the submission version]
-This GitHub repository offers a template specifically designed to teach students how to write effective README.md files and create a well-organized file structure. The template provides clear instructions and examples, helping students to learn the basics of GitHub and how to create professional-looking repositories.
-
-
-# Project Title
-
-[Enter the title of your project]
+# Selective Identity Labeling in Headlines of the New York Times (2020-2026)
 
 ## Project Description
 
