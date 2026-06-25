@@ -78,7 +78,7 @@ Anita - 111ZU1003 (maybe your moodle name?)
 
 ## Acknowledgments
 
-[Thank any individuals or organizations who provided support or assistance during your project, including funding sources or data providers.]
+We acknowledge the work of our former team mate 魏彤芸 who also contributed in the data collection and distribution of the initial work. Moreover, we are in gratitute with our institution, National Chengchi University, for providing students with access to ProQuest. 
 
 ## References
 
