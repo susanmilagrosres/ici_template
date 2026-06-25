@@ -2,7 +2,12 @@
 
 ## Project Description
 
-[Enter a brief description of your project, including the data you used and the analytical methods you applied. Be sure to provide context for your project and explain why it is important.]
+This research project aims to identify whether minorities' identificatory labels such as "Latino", "Black" or "Indigenous" are overrepresented in the news. Other authors have proved this correct, and have suggested the analysis of large-scale news to further corroborate their results (Schulte et al, 2025). Bridging this research gap, we focus on analizying news headlines in crime-related articles of the New York Times (NYT) in the periof of January 2020 to May 2026. We choose the NYT because it is seen as a neutral source (Usher, 2020) and we wonder whether such source keeps a neutral position by not over-mentioning minorities' labels. 
+
+The media has the power of constructing and shaping our ideas of what is crime and who commits it (Kort-Butler & Habecker, 2018), these images are not just alleatory information but are ways through which the status quo is reinforced: further negative stereotypezation of minorities groups (Bonilla-Silva, 2013). Thus, the importance of this is research is on one side, to further contribute to the media literacy of the reader and empowering us by identifying these patterns; and on the other side, to raise awareness and stop stereotypezation that might influence negatively criminal justice policies. 
+
+To analyze the NYT headlines, we first filtered all the headlines of the NYT and left only those related to crime. After that, we used LLM to identify the different associations. Further explanations of the process will be given in the sections below. 
+
 
 ## Getting Started
 
@@ -67,7 +72,7 @@ Overall, the findings show that minority groups were consistently represented di
 
 Tiffany Rachel.S - 112ZU1028
 Erinna Tania - 112ZU1006
-Susan Davalos - 112ZU1041
+Susan M. Dávalos V. - 112ZU1041 In charge of setting the problematic + The research behind the issue + Collecting part of the data from PreQuest. 
 Anita - 111ZU1003 (maybe your moodle name?)
 
 
@@ -76,5 +81,13 @@ Anita - 111ZU1003 (maybe your moodle name?)
 [Thank any individuals or organizations who provided support or assistance during your project, including funding sources or data providers.]
 
 ## References
+
+Bonilla-Silva, E. (2013). Racism without Racists: Color-Blind Racism and the Persistence of Racial Inequality in America. Rowman & Littlefield Publishers, Chapter 2. 
+
+Kort-Butler, L. A. and Habecker, P. (2018). Framing and Cultivating the Story of Crime: The Effects of Media Use, Victimization, and Social Networks on Attitudes About Crime. Criminal Justice Review 43:2, pp. 3. https://doi.org/10.1177/0734016817710696  
+
+Schulte, N. et al. (2025). The Minority Dilemma in Communication: Why Minority Labels are Overrepresented in News Coverage. Social Psychological and Personality Science. https://doi.org/10.1177/19485506251393406
+
+Usher, N. (2020). The New York Times in Trump’s America: A Failure for Liberals, A Champion for Liberalism. Political Communication, 37(4), 573–581. https://doi.org/10.1080/10584609.2020.1777686
 
 [List any references or resources that you used during your project, including data sources, analytical methods, and tools.]
