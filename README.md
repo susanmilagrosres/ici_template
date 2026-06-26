@@ -40,7 +40,7 @@ Following the initial collection, these raw data files were carefully combined a
 
 The systematic processing, empirical modeling, and visualization of this curated dataset are managed through the following programmatic framework:
 
-* **`combined_news.xlsx`**: The consolidated, primary dataset containing the filtered New York Times metadata spanning 2020–2026. This serves as the single source of truth for all downstream computational procedures.
+* **`combined_news.xlsx`**: The primary dataset containing the filtered New York Times metadata spanning 2020–2026. This serves as the single source of truth for all downstream computational procedures.
 * **`minority_identity_analysis.py`**: The central analysis pipeline written in Python. It executes regex-driven semantic frame extraction, builds standardized logistic regression models using `scikit-learn`, conducts rigorous statistical significance tests (`scipy`), and maps temporal distributions. 
 * **`outputs/`**: A generated directory containing high-resolution visual assets synthesized directly by the analysis script to strengthen our core hypotheses:
     * `fig1_semantic_frame.png`: Evaluates the raw frequency distributions of explicit identity labels, comparing relative marking rates across crime versus non-crime contexts, further stratified by localized crime severity metrics.
@@ -109,8 +109,7 @@ $$\ln\left(\frac{P(Y=1)}{1-P(Y=1)}\right) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 
 To ensure maximum reliability and guard against distributional anomalies, the script utilizes a **500-sample bootstrap resampling method** to calculate $95\%$ Confidence Intervals for the resulting Odds Ratios ($OR = e^\beta$).
 
 #### B. Two-Sample Z-Test for Proportions
-To explicitly test the hypothesis that minority groups face heightened marking rates specifically within crime contexts, we run a two-sample proportion Z-test. This evaluates the significance of the difference between minority labeling rates in crime-related articles versus non-crime-related articles:
-$$Z = \frac{\hat{p}_{\text{crime}} - \hat{p}_{\text{non-crime}}}{\sqrt{\hat{p}_{\text{pooled}}(1 - \hat{p}_{\text{pooled}})(\frac{1}{n_{\text{crime}}} + \frac{1}{n_{\text{non-crime}}})}$$
+To explicitly test the hypothesis that minority groups face heightened marking rates specifically within crime contexts, we run a two-sample proportion Z-test. This evaluates the significance of the difference between minority labeling rates in crime-related articles versus non-crime-related articles.
 
 #### C. Chi-Square ($\chi^2$) Contingency Analysis
 Finally, to measure the structural interaction between explicit identity framing and weaponized language tiers, a Chi-Square test of independence is applied to a cross-tabulation of identity groups (*Minority* vs. *Non-Minority* vs. *Neither*) and crime severity levels (*Low* vs. *Medium* vs. *High*). This establishes whether severe crime narratives disproportionately pull distinct demographic classes into explicit focal frames.
