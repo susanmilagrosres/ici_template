@@ -72,7 +72,7 @@ This study focuses exclusively on crime-related headlines published in the New Y
 
 [List the contributors to your project and describe their roles and responsibilities.]
 
-Tiffany Rachel.S - 112ZU1028 In charge of final Analysis, partial data collection, data processing and cleaning. 
+Tiffany Rachel.S - 112ZU1028 In charge of final Analysis, progamming, partial data collection, data processing and cleaning. 
 Erinna Tania - 112ZU1006 In charge of finding the data source, partial data collection, initial data processing and cleaning, results analysis, and poster making.
 Susan M. Dávalos V. - 112ZU1041 In charge of setting the problematic + The research behind the issue + Collecting part of the data from PreQuest. 
 Pin Hsuan Lin, Anita - 111ZU1003
