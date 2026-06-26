@@ -10,7 +10,13 @@ To analyze the NYT headlines, we first filtered all the headlines of the NYT and
 
 
 ## Getting Started
-
+This project analyzes semantic frame extraction and identity labeling trends within crime-related New York Times articles from 2020 to 2026. Follow these instructions to set up the environment and run the analysis pipeline.
+### Prerequisites
+Before running the pipeline, ensure you have the following installed:
+* **Python 3.8 or higher**
+* **pip** (Python package installer)
+### Installation
+1. **Clone the repository:**
 [Provide instructions on how to get started with your project, including any necessary software or data. Include installation instructions and any prerequisites or dependencies that are required.]
 
 ## File Structure
