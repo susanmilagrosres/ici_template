@@ -75,7 +75,7 @@ This study focuses exclusively on crime-related headlines published in the New Y
 Tiffany Rachel.S - 112ZU1028
 Erinna Tania - 112ZU1006
 Susan M. Dávalos V. - 112ZU1041 In charge of setting the problematic + The research behind the issue + Collecting part of the data from PreQuest. 
-Anita - 111ZU1003 (maybe your moodle name?)
+Pin Hsuan Lin, Anita - 111ZU1003
 
 
 ## Acknowledgments
