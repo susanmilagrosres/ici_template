@@ -16,13 +16,15 @@ Before running the pipeline, ensure you have the following installed:
 * **pip** (Python package installer)
 ### Installation
 **Install the required packages:**
-You can install all dependencies via pip. It is highly recommended to use a virtual environment.
+Install the required packages via `pip`. It is highly recommended to use a virtual environment:
+```bash
 pip install pandas numpy openpyxl matplotlib seaborn scikit-learn scipy
 ### Data & Repository Setup
 **Prepare your data folder:** Download the combined_news.xlsx file from our provided link and ensure it is saved in your desired working directory.
 **Clone the repository:** Open your terminal, navigate to that same folder, and clone the repository directly into it.
 ### Running the Analysis
 Execute the Python script from your terminal to run the pipeline:
+```bash
 python minority_identity_analysis.py
 ### Outputs
 When the script executes successfully, it will print summary statistics directly to the terminal and create an outputs/ folder containing three analytical figures:
