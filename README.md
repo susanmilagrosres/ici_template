@@ -6,7 +6,7 @@ This research project aims to identify whether minorities' identificatory labels
 
 The media has the power of constructing and shaping our ideas of what is crime and who commits it (Kort-Butler & Habecker, 2018), these images are not just alleatory information but are ways through which the status quo is reinforced: further negative stereotypezation of minorities groups (Bonilla-Silva, 2013). Thus, the importance of this is research is on one side, to further contribute to the media literacy of the reader and empowering us by identifying these patterns; and on the other side, to raise awareness and stop stereotypezation that might influence negatively criminal justice policies. 
 
-To analyze the NYT headlines, we first filtered all the headlines of the NYT and left only those related to crime. After that, we used LLM to identify the different associations. Further explanations of the process will be given in the sections below. 
+To analyze the NYT headlines, we first filtered all the headlines of the NYT and left only those related to crime. After that, we used a dictionary based filtering and co-occurrence analysis to identify the different associations. Further explanations of the process will be given in the sections below. 
 
 ## Getting Started
 This project analyzes semantic frame extraction and identity labeling trends within crime-related New York Times articles from 2020 to 2026. Follow these instructions to set up the environment and run the analysis pipeline.
