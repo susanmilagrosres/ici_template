@@ -8,7 +8,6 @@ The media has the power of constructing and shaping our ideas of what is crime a
 
 To analyze the NYT headlines, we first filtered all the headlines of the NYT and left only those related to crime. After that, we used LLM to identify the different associations. Further explanations of the process will be given in the sections below. 
 
-
 ## Getting Started
 This project analyzes semantic frame extraction and identity labeling trends within crime-related New York Times articles from 2020 to 2026. Follow these instructions to set up the environment and run the analysis pipeline.
 ### Prerequisites
@@ -16,8 +15,20 @@ Before running the pipeline, ensure you have the following installed:
 * **Python 3.8 or higher**
 * **pip** (Python package installer)
 ### Installation
-1. **Clone the repository:**
-[Provide instructions on how to get started with your project, including any necessary software or data. Include installation instructions and any prerequisites or dependencies that are required.]
+**Install the required packages:**
+You can install all dependencies via pip. It is highly recommended to use a virtual environment.
+pip install pandas numpy openpyxl matplotlib seaborn scikit-learn scipy
+### Data & Repository Setup
+Prepare your data folder: Download the combined_news.xlsx file from our provided link and ensure it is saved in your desired working directory.
+Clone the repository: Open your terminal, navigate to that same folder, and clone the repository directly into it.
+### Running the Analysis
+Execute the Python script from your terminal to run the pipeline:
+python minority_identity_analysis.py
+### Outputs
+When the script executes successfully, it will print summary statistics directly to the terminal and create an outputs/ folder containing three analytical figures:
+1. outputs/fig1_semantic_frame.png: Visualizes identity label frequencies, marking rates (crime vs. non-crime), and breakdowns by severity.
+2. outputs/fig2_temporal_shifts.png: Illustrates yearly and monthly trends, highlighting social-political catalysts (e.g., the George Floyd protests, Uvalde).
+3. outputs/fig3_statistical_model.png: Displays statistical regression models (Forest plot of Odds Ratios), Chi-square tests, and proportional Z-test heatmaps.
 
 ## File Structure
 
