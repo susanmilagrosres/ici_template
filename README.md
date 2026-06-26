@@ -26,9 +26,9 @@ Execute the Python script from your terminal to run the pipeline:
 ``python minority_identity_analysis.py``
 ### Outputs
 When the script executes successfully, it will print summary statistics directly to the terminal and create an outputs/ folder containing three analytical figures:
-1. outputs/fig1_semantic_frame.png: Visualizes identity label frequencies, marking rates (crime vs. non-crime), and breakdowns by severity.
-2. outputs/fig2_temporal_shifts.png: Illustrates yearly and monthly trends, highlighting social-political catalysts (e.g., the George Floyd protests, Uvalde).
-3. outputs/fig3_statistical_model.png: Displays statistical regression models (Forest plot of Odds Ratios), Chi-square tests, and proportional Z-test heatmaps.
+1. ``outputs/fig1_semantic_frame.png``: Visualizes identity label frequencies, marking rates (crime vs. non-crime), and breakdowns by severity.
+2. ``outputs/fig2_temporal_shifts.png``: Illustrates yearly and monthly trends, highlighting social-political catalysts (e.g., the George Floyd protests, Uvalde).
+3. ``outputs/fig3_statistical_model.png``: Displays statistical regression models (Forest plot of Odds Ratios), Chi-square tests, and proportional Z-test heatmaps.
 
 ## File Structure
 
