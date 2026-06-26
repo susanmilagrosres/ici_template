@@ -17,6 +17,7 @@ Before running the pipeline, ensure you have the following installed:
 ### Installation
 **Clone the repository:** ``git clone https://github.com/susanmilagrosres/ici_template.git
 cd ici_template``
+
 **Install the required packages:**
 Install the required packages via `pip`. It is highly recommended to use a virtual environment:
 ``pip install pandas numpy openpyxl matplotlib seaborn scikit-learn scipy``
