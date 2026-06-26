@@ -42,7 +42,7 @@ The systematic processing, empirical modeling, and visualization of this curated
 
 * **`combined_news.xlsx`**: The consolidated, primary dataset containing the filtered New York Times metadata spanning 2020–2026. This serves as the single source of truth for all downstream computational procedures.
 * **`minority_identity_analysis.py`**: The central analysis pipeline written in Python. It executes regex-driven semantic frame extraction, builds standardized logistic regression models using `scikit-learn`, conducts rigorous statistical significance tests (`scipy`), and maps temporal distributions. 
-* **`outputs/`**: A dynamically generated directory containing high-resolution visual assets synthesized directly by the analysis script to strengthen our core hypotheses:
+* **`outputs/`**: A generated directory containing high-resolution visual assets synthesized directly by the analysis script to strengthen our core hypotheses:
     * `fig1_semantic_frame.png`: Evaluates the raw frequency distributions of explicit identity labels, comparing relative marking rates across crime versus non-crime contexts, further stratified by localized crime severity metrics.
     * `fig2_temporal_shifts.png`: Tracks multi-year longitudinal trends, mapping moving averages against major sociopolitical catalysts alongside an evolving structural breakdown of the demographic minority gap.
     * `fig3_statistical_model.png`: Contains the formal statistical evaluation, featuring a forest plot of bootstrapped Odds Ratios ($95\%$ CI), a comparative Z-proportion test, and a multi-variable chi-square ($\chi^2$) contingency heatmap.
@@ -83,6 +83,37 @@ Figure 3(b) presents the results of the proportion test comparing identity label
 Figure 3(c) further examines the relationship between identity groups and crime severity. Across low, medium, and high-severity crimes, minority identities were labeled much more frequently than non-minority identities. Non-minority labeling remained consistently low across all crime categories, while a large proportion of articles did not include any identity label. The significant chi-square result (χ² = 219.2, p < 0.001) suggests a strong association between identity group representation and crime severity.
 
 Figure 3(d) shows how the relationship between crime context and identity labeling changed over time. Minority identities consistently recorded higher odds ratios than non-minority identities throughout the study period. The strongest effect appeared in 2020, when minority identity labeling was around three times more likely to occur in crime-related content. Although the strength of the relationship decreased in later years, minority identities remained more strongly associated with crime reporting than non-minority identities from 2020 to 2026.
+
+### Analysis Methods
+
+Our computational pipeline translates raw text data into statistically sound insights using a multi-staged quantitative approach: Semantic Frame Extraction, Temporal Shift Analysis, and Inferential Statistical Modeling. All processing and mathematical computations are handled programmatically via `minority_identity_analysis.py`.
+
+### 1. Semantic Frame & Feature Extraction
+To isolate media framing surrounding crime and identity, the analytical pipeline executes a series of deterministic text-matching procedures utilizing regular expressions (regex):
+* **Crime Context Identification**: Articles are flagged as crime-related if their title, identifier keywords, or subject terms contain any core crime-related variants (e.g., *crime, criminal, murder, shooting, assault, arrest*).
+* **Crime Severity Stratification**: Crime-related articles are further stratified into localized severity tiers. High-severity contexts are defined by explicit indicators of lethal violence (*murder, homicide, shooting, killing, terror*), while medium-severity contexts capture non-lethal physical or structural threats (*assault, robbery, violence, attack, gunman*). All other instances default to a base severity level.
+* **Identity Label Detection**: The script extracts explicit demographic signifiers by mapping text tokens to predefined dictionaries representing **Minority Group Identities** (*Black, Latino, Asian, Refugee, Muslim, Jewish, Indigenous*) and **Non-Minority Group Identities** (*White, Christian, American-born*).
+
+### 2. Temporal Shift & Catalyst Mapping
+To evaluate how identity marking responds to macro-level historical events, the pipeline tracks labeling behaviors chronologically:
+* **Annual & Monthly Rate Tracking**: Labeling rates are aggregated both annually and monthly to measure the shifting baseline of explicit demographic callouts over time. 
+* **Sociopolitical Catalyst Alignment**: The longitudinal trend is smoothed using a 3-month moving average and systematically mapped against key historical anchor points (e.g., the George Floyd Murder in May 2020, the January 6 Capitol Riot, the Atlanta Spa Shootings, and the Uvalde School Shooting) to observe real-time spikes or decay patterns in identity framing.
+* **Labeling Gap Calculation**: A continuous metric ($pp$) is calculated by subtracting the non-minority labeling rate from the minority labeling rate annually, isolating the net variance in group overrepresentation.
+
+### 3. Statistical & Predictive Modeling
+To determine whether observed disparities are statistically meaningful rather than coincidental, we deploy three distinct formal modeling strategies:
+
+#### A. Multivariate Logistic Regression
+We construct two parallel, standardized logistic regression models to predict the probability of an article receiving an identity mark ($Y \in \{0, 1\}$) based on three standardized predictors: Crime Context ($X_1$), Crime Severity ($X_2$), and a centered Year Trend ($X_3$). 
+$$\ln\left(\frac{P(Y=1)}{1-P(Y=1)}\right) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3$$
+To ensure maximum reliability and guard against distributional anomalies, the script utilizes a **500-sample bootstrap resampling method** to calculate $95\%$ Confidence Intervals for the resulting Odds Ratios ($OR = e^\beta$).
+
+#### B. Two-Sample Z-Test for Proportions
+To explicitly test the hypothesis that minority groups face heightened marking rates specifically within crime contexts, we run a two-sample proportion Z-test. This evaluates the significance of the difference between minority labeling rates in crime-related articles versus non-crime-related articles:
+$$Z = \frac{\hat{p}_{\text{crime}} - \hat{p}_{\text{non-crime}}}{\sqrt{\hat{p}_{\text{pooled}}(1 - \hat{p}_{\text{pooled}})(\frac{1}{n_{\text{crime}}} + \frac{1}{n_{\text{non-crime}}})}$$
+
+#### C. Chi-Square ($\chi^2$) Contingency Analysis
+Finally, to measure the structural interaction between explicit identity framing and weaponized language tiers, a Chi-Square test of independence is applied to a cross-tabulation of identity groups (*Minority* vs. *Non-Minority* vs. *Neither*) and crime severity levels (*Low* vs. *Medium* vs. *High*). This establishes whether severe crime narratives disproportionately pull distinct demographic classes into explicit focal frames.
 
 ## Results
 
