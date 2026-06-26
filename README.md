@@ -36,6 +36,17 @@ The file of the project consists of data from New York Times news outlet ranging
 
 Following the initial collection, these raw data files were carefully combined and cleaned to create a unified dataset suitable to our modeling. This file contains several crucial variables that drive our methodology. The "titles" variable stores the headline of each news article, which serves as the primary text for examining identity marking and semantic frames. To manage and organize the entries, we included a unique "storeid" along with the specific "entry date" and "publication date." The extracted publication "year" allows us to effectively track temporal trends and annual shifts in media framing. Furthermore, the "subject" and "subject terms" variables help categorize the content and verify the specific crime context of each article, while the "author" variable identifies the journalist responsible for the piece. Ultimately, this streamlined file organization ensures a logical progression from raw keyword extraction to the refined data required to evaluate selective identity marking.
 
+### Core Architecture & Execution Flow
+
+The systematic processing, empirical modeling, and visualization of this curated dataset are managed through the following programmatic framework:
+
+* **`combined_news.xlsx`**: The consolidated, primary dataset containing the filtered New York Times metadata spanning 2020–2026. This serves as the single source of truth for all downstream computational procedures.
+* **`minority_identity_analysis.py`**: The central analysis pipeline written in Python. It executes regex-driven semantic frame extraction, builds standardized logistic regression models using `scikit-learn`, conducts rigorous statistical significance tests (`scipy`), and maps temporal distributions. 
+* **`outputs/`**: A dynamically generated directory containing high-resolution visual assets synthesized directly by the analysis script to strengthen our core hypotheses:
+    * `fig1_semantic_frame.png`: Evaluates the raw frequency distributions of explicit identity labels, comparing relative marking rates across crime versus non-crime contexts, further stratified by localized crime severity metrics.
+    * `fig2_temporal_shifts.png`: Tracks multi-year longitudinal trends, mapping moving averages against major sociopolitical catalysts alongside an evolving structural breakdown of the demographic minority gap.
+    * `fig3_statistical_model.png`: Contains the formal statistical evaluation, featuring a forest plot of bootstrapped Odds Ratios ($95\%$ CI), a comparative Z-proportion test, and a multi-variable chi-square ($\chi^2$) contingency heatmap.
+
 ## Analysis
 <img width="1256" height="432" alt="Screenshot 2026-06-24 223119" src="https://github.com/user-attachments/assets/9204537f-bcac-4020-a46c-6d4d38d2ec22" />
 
