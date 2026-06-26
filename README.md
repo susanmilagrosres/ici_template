@@ -89,7 +89,7 @@ Figure 3(d) shows how the relationship between crime context and identity labeli
 Our computational pipeline translates raw text data into statistically sound insights using a multi-staged quantitative approach: Semantic Frame Extraction, Temporal Shift Analysis, and Inferential Statistical Modeling. All processing and mathematical computations are handled programmatically via `minority_identity_analysis.py`.
 
 ### 1. Semantic Frame & Feature Extraction
-To isolate media framing surrounding crime and identity, the analytical pipeline executes a series of deterministic text-matching procedures utilizing regular expressions (regex):
+To isolate media framing surrounding crime and identity, the analytical pipeline executes a series of text-matching procedures utilizing regular expressions (regex):
 * **Crime Context Identification**: Articles are flagged as crime-related if their title, identifier keywords, or subject terms contain any core crime-related variants (e.g., *crime, criminal, murder, shooting, assault, arrest*).
 * **Crime Severity Stratification**: Crime-related articles are further stratified into localized severity tiers. High-severity contexts are defined by explicit indicators of lethal violence (*murder, homicide, shooting, killing, terror*), while medium-severity contexts capture non-lethal physical or structural threats (*assault, robbery, violence, attack, gunman*). All other instances default to a base severity level.
 * **Identity Label Detection**: The script extracts explicit demographic signifiers by mapping text tokens to predefined dictionaries representing **Minority Group Identities** (*Black, Latino, Asian, Refugee, Muslim, Jewish, Indigenous*) and **Non-Minority Group Identities** (*White, Christian, American-born*).
