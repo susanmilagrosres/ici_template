@@ -151,4 +151,11 @@ Schulte, N. et al. (2025). The Minority Dilemma in Communication: Why Minority L
 
 Usher, N. (2020). The New York Times in Trump’s America: A Failure for Liberals, A Champion for Liberalism. Political Communication, 37(4), 573–581. https://doi.org/10.1080/10584609.2020.1777686
 
-[List any references or resources that you used during your project, including data sources, analytical methods, and tools.]
+### Analytical Tools & Software Stack
+
+The quantitative pipeline and data architecture were developed entirely within the Python ecosystem using the following open-source libraries:
+
+* **Pandas & NumPy**: Utilized for programmatic data wrangling, handling the Excel matrix, structural cleaning, and vectorizing regular expression matches.
+* **Scikit-Learn (`sklearn`)**: Used to construct the multivariate logistic regression models, scale numerical inputs via `StandardScaler`, and extract predictive coefficients.
+* **SciPy (`scipy.stats`)**: Applied to compute inferential diagnostics, specifically executing the two-sample proportion Z-test and the Chi-Square ($\chi^2$) test of independence.
+* **Matplotlib & Seaborn**: Employed to generate all high-resolution visual outputs (`fig1_semantic_frame.png`, `fig2_temporal_shifts.png`, and `fig3_statistical_model.png`), including the custom forest plots and heatmaps.
