@@ -128,7 +128,7 @@ This study focuses exclusively on crime-related headlines published in the New Y
 
 ## Contributors
 
-Tiffany Rachel.S - 112ZU1028 In charge of final analysis, progamming, partial data collection, methodological analysis, and data processing and cleaning. 
+Tiffany Rachel.S - 112ZU1028 In charge of final analysis, progamming, data collection, methodological analysis, and data processing and cleaning. 
 
 Erinna Tania - 112ZU1006 In charge of finding the data source, partial data collection, initial data processing and cleaning, results analysis, and poster making.
 
